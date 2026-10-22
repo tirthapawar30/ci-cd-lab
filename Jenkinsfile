@@ -27,12 +27,15 @@ pipeline {
         }
 
         stage('Deploy') {
+            when {
+                branch 'main'
+            }
             steps {
-                sh 'mkdir -p public'
-                sh 'cp src/index.html public/'
-                sh 'cp src/style.css public/'
-                sh 'cp src/calculator.js public/'
-                echo 'Calculator files prepared for local deployment'
+                sh 'mkdir -p /Users/Shared/ci-cd-deploy'
+                sh 'cp src/index.html /Users/Shared/ci-cd-deploy/'
+                sh 'cp src/style.css /Users/Shared/ci-cd-deploy/'
+                sh 'cp src/calculator.js /Users/Shared/ci-cd-deploy/'
+                echo 'Application deployed to /Users/Shared/ci-cd-deploy'
             }
         }
     }
