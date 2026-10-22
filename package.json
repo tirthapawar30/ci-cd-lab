@@ -1,16 +1,12 @@
 {
-    "name": "ci-cd-lab",
-    "version": "1.0.0",
-    "description": "CI/CD pipeline lab using GitHub Actions",
-    "scripts": {
-        "test": "jest"
-    },
-    "devDependencies": {
-        "jest": "^29.7.0"
-    }
+  "name": "ci-cd-lab",
+  "version": "1.0.0",
+  "description": "A simple calculator project for CI/CD lab",
+  "main": "src/calculator.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
 }
-
-Install the dependencies and run the tests using Terminal:
-
-npm install
-npm test
