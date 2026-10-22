@@ -26,10 +26,7 @@ pipeline {
             }
         }
 
-        stage('Deploy') {
-    when {
-        branch 'main'
-    }
+stage('Deploy') {
     steps {
         sh 'mkdir -p /Users/Shared/ci-cd-deploy'
         sh 'cp src/index.html /Users/Shared/ci-cd-deploy/'
